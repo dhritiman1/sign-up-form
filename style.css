@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.container .left {
+  width: 45vw;
+  background-image: url("assets/1.jpg");
+  background-repeat: no-repeat;
+}
+.container .left .logo {
+  position: relative;
+  top: 8vh;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  opacity: 20%;
+}
+.container .left .logo svg {
+  height: 80px;
+  width: 80px;
+  fill: #fff;
+}
+.container .left .logo .jap-logo {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+}
+.container .right {
+  width: 110vw;
+  background-color: #222222;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  color: #cecece;
+  font-size: 1.2rem;
+}
+.container .right .text {
+  padding: 2vh 4vw;
+}
+.container .right .emphasis {
+  padding: 0vh 4vw;
+  padding-bottom: 2vh;
+}
+.container .right form {
+  width: 100%;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  background-color: #202020;
+  box-shadow: 0 10px 10px -10px #1b1b1b;
+}
+.container .right form fieldset {
+  border: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 1vh;
+}
+.container .right form fieldset legend {
+  font-size: 1.4rem;
+  padding: 1vh 4vw;
+}
+.container .right form fieldset label {
+  opacity: 60%;
+}
+.container .right form fieldset .input {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  padding: 1vh 4vw;
+  font-size: 1rem;
+}
+.container .right form fieldset input {
+  background-color: #303030;
+  opacity: 80%;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 6px;
+  transition: 0.1s;
+}
+.container .right form fieldset input:invalid {
+  color: #c50505;
+}
+.container .right form fieldset input:focus {
+  outline: none;
+  opacity: 100%;
+  box-shadow: 0px 1px 2px #353535;
+}
+.container .right form fieldset .validation {
+  padding-top: 3px;
+  height: 11px;
+  font-size: 11px;
+  opacity: 80%;
+  color: #f53939;
+}
+.container .right form button {
+  background-color: #303030;
+  opacity: 80%;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  width: 300px;
+  margin: 1vh 4vw;
+  padding: 10px 3vw;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px #1b1b1b;
+}
+.container .right form button:hover {
+  background-color: #323232;
+  opacity: 100%;
+  box-shadow: 0 6px 8px #1b1b1b;
+}
+.container .right form button:active {
+  background-color: #1b1b1b;
+  opacity: 100%;
+}
+.container .right .login {
+  padding: 2vh 4vw;
+  opacity: 90%;
+}
+.container .right .login span {
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .right .login span:hover {
+  color: #fff;
+  opacity: 100%;
+}
+.container .right .login span:active {
+  opacity: 40%;
+}/*# sourceMappingURL=style.css.map */

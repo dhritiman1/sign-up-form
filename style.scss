@@ -1,0 +1,161 @@
+$fontsize: 1.2rem;
+$form-font-size: 1rem;
+$fontcolor: #cecece;
+
+@mixin button-and-input {
+    background-color: #303030;
+    opacity: 80%;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    .left {
+        width: 45vw;
+        background-image: url("assets/1.jpg");
+        background-repeat: no-repeat;
+
+        .logo {
+            position: relative;
+            top: 8vh;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            opacity: 20%;
+
+            svg {
+                height: 80px;
+                width: 80px;
+                fill: #fff;
+            }
+
+            .jap-logo {
+                text-align: center;
+                color: #fff;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .right {
+        width: 110vw;
+        background-color: #222222;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        color: $fontcolor;
+        font-size: $fontsize;
+
+        .text {
+            padding: 2vh 4vw;
+        }
+
+        .emphasis {
+            padding: 0vh 4vw;
+            padding-bottom: 2vh;
+        }
+
+        form {
+            width: 100%;
+            padding-top: 2vh;
+            padding-bottom: 3vh;
+            background-color: #202020;
+            box-shadow: 0 10px 10px -10px #1b1b1b;
+
+            fieldset {
+                border: none;
+                display: flex;
+                flex-flow: row wrap;
+                padding-bottom: 1vh;
+
+                legend {
+                    font-size: 1.4rem;
+                    padding: 1vh 4vw;
+                }
+
+                label {
+                    opacity: 60%;
+                }
+
+                .input {
+                    display: flex;
+                    flex-flow: column wrap;
+                    width: 40%;
+                    padding: 1vh 4vw;
+                    font-size: $form-font-size;
+                }
+
+                input {
+                    @include button-and-input();
+                    padding: 6px;
+                    transition: 0.1s;
+
+                    &:invalid {
+                        color: #c50505;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        opacity: 100%;
+                        box-shadow: 0px 1px 2px #353535;
+                    }
+                }
+
+                .validation {
+                    padding-top: 3px;
+                    height: 11px;
+                    font-size: 11px;
+                    opacity: 80%;
+                    color: #f53939;
+                }
+            }
+
+            button {
+                @include button-and-input();
+                width: 300px;
+                margin: 1vh 4vw;
+                padding: 10px 3vw;
+                transition: 0.3s;
+                box-shadow: 0 4px 8px #1b1b1b;
+
+                &:hover {
+                    background-color: #323232;
+                    opacity: 100%;
+                    box-shadow: 0 6px 8px #1b1b1b;
+                }
+
+                &:active {
+                    background-color: #1b1b1b;
+                    opacity: 100%;
+                }
+            }
+        }
+
+        .login {
+            padding: 2vh 4vw;
+            opacity: 90%;
+
+            span {
+                font-weight: 500;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #fff;
+                    opacity: 100%;
+                }
+
+                &:active {
+                    opacity: 40%;
+                }
+            }
+        }
+    }
+}
